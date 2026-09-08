@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #131313;
+  --color-surface-dim: #131313;
+  --color-surface-bright: #393939;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container: #201f1f;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #d0c6ab;
+  --color-primary: #fff5dc;
+  --color-on-primary: #3a3000;
+  --color-primary-container: #ffd600;
+  --color-on-primary-container: #705d00;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-tertiary-fixed-dim: #4cd6fb;
+  --color-secondary-container: #47464d;
+  --color-on-secondary: #303036;
+  --color-outline: #999077;
+  --color-primary-fixed: #ffe170;
+  --color-primary-fixed-dim: #e9c400;
+
+  --font-headline-xl: Outfit, sans-serif;
+  --font-headline-xl-mobile: Outfit, sans-serif;
+  --font-headline-lg: Outfit, sans-serif;
+  --font-headline-md: Outfit, sans-serif;
+  --font-headline-sm: Outfit, sans-serif;
+  --font-label-index: Outfit, sans-serif;
+  --font-label-caps: Outfit, sans-serif;
+  --font-label-metric: Outfit, sans-serif;
+  --font-body-lg: "Plus Jakarta Sans", sans-serif;
+  --font-body-md: "Plus Jakarta Sans", sans-serif;
+  --font-body-sm: "Plus Jakarta Sans", sans-serif;
+
+  --spacing-space-2xs: 0.25rem;
+  --spacing-space-xs: 0.5rem;
+  --spacing-space-sm: 0.75rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.25rem;
+  --spacing-space-xl: 1.5rem;
+  --spacing-space-2xl: 2rem;
+  --spacing-space-3xl: 2.5rem;
+  --spacing-margin-mobile: 1rem;
+  --spacing-bottom-nav-clearance: 5.5rem;
+
+  --radius: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+}
+
+@utility text-headline-xl { font-size: 40px; line-height: 48px; letter-spacing: -0.03em; font-weight: 800; }
+@utility text-headline-xl-mobile { font-size: 32px; line-height: 38px; letter-spacing: -0.02em; font-weight: 800; }
+@utility text-headline-lg { font-size: 28px; line-height: 34px; letter-spacing: -0.02em; font-weight: 700; }
+@utility text-headline-md { font-size: 22px; line-height: 28px; letter-spacing: -0.01em; font-weight: 700; }
+@utility text-headline-sm { font-size: 18px; line-height: 24px; font-weight: 600; }
+@utility text-body-lg { font-size: 16px; line-height: 24px; font-weight: 400; }
+@utility text-body-md { font-size: 14px; line-height: 20px; font-weight: 400; }
+@utility text-body-sm { font-size: 12px; line-height: 16px; font-weight: 400; }
+@utility text-label-index { font-size: 15px; line-height: 18px; letter-spacing: 0.08em; font-weight: 800; }
+@utility text-label-caps { font-size: 11px; line-height: 14px; letter-spacing: 0.06em; font-weight: 700; }
+@utility text-label-metric { font-size: 20px; line-height: 24px; font-weight: 800; }
+
+@utility font-headline-xl { font-family: Outfit, sans-serif; }
+@utility font-headline-xl-mobile { font-family: Outfit, sans-serif; }
+@utility font-headline-lg { font-family: Outfit, sans-serif; }
+@utility font-headline-md { font-family: Outfit, sans-serif; }
+@utility font-headline-sm { font-family: Outfit, sans-serif; }
+@utility font-body-lg { font-family: "Plus Jakarta Sans", sans-serif; }
+@utility font-body-md { font-family: "Plus Jakarta Sans", sans-serif; }
+@utility font-body-sm { font-family: "Plus Jakarta Sans", sans-serif; }
+@utility font-label-index { font-family: Outfit, sans-serif; }
+@utility font-label-caps { font-family: Outfit, sans-serif; }
+@utility font-label-metric { font-family: Outfit, sans-serif; }
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #131313;
+  }
+  body {
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
